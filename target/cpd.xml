@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd-cpd>
+   <duplication lines="17" tokens="111">
+      <file line="46"
+            path="C:\Users\Vili\workspaceZaJavaTecaj\webserver\src\main\java\hr\fer\zemris\java\custom\scripting\demo\DemoSmartScriptEngine.java"/>
+      <file line="131"
+            path="C:\Users\Vili\workspaceZaJavaTecaj\webserver\src\main\java\hr\fer\zemris\java\custom\scripting\demo\DemoSmartScriptEngine.java"/>
+      <codefragment><![CDATA[					.get("webroot/scripts/fibonacci.smscr")),
+					StandardCharsets.UTF_8);
+		} catch (IOException e) {
+			System.err.println("Invalid path or problem reading file!");
+			System.exit(-1);
+		}
+		
+		Map<String, String> parameters = new HashMap<String, String>();
+		Map<String, String> persistentParameters = new HashMap<String, String>();
+		List<RCCookie> cookies = new ArrayList<RequestContext.RCCookie>();
+		// create engine and execute it
+		new SmartScriptEngine(
+				new SmartScriptParser(documentBody).getDocumentNode(),
+				new RequestContext(System.out, parameters,
+						persistentParameters, cookies)).execute();
+
+	}]]></codefragment>
+   </duplication>
+</pmd-cpd>
